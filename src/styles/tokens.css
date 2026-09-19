@@ -1,0 +1,75 @@
+/*
+ * Design tokens: the Makro layout system (docs/design-reference.md) in Dough n Frost colours.
+ * Cocoa ink on a warm cream ground, with frosting pink ("berry") as the one bright accent; the
+ * pastel slots keep their Makro names but carry bakery tones (sand = caramel, steel = cocoa rose,
+ * sky = the blue of their Frozen cakes). Light-only by design.
+ */
+:root {
+  color-scheme: light;
+
+  --ground: #f5ede8;
+  --surface: #ffffff;
+  --ink: #2b1f1d;
+  --ink-75: rgba(43, 31, 29, 0.75);
+  --ink-50: rgba(43, 31, 29, 0.5);
+  --ink-25: rgba(43, 31, 29, 0.25);
+  --ink-12: rgba(43, 31, 29, 0.12);
+  --ink-06: rgba(43, 31, 29, 0.06);
+  --charcoal: #3b2b28;
+  --graphite: #574540;
+  --white-75: rgba(255, 255, 255, 0.75);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --glass: rgba(255, 255, 255, 0.8);
+
+  --berry: #ff9ccb;
+  --berry-wash: #ffe8f3;
+  --lilac: #d4c1ff;
+  --sky: #bfe3f5;
+  --blush: #fde7e4;
+  --sand: #e9c7a4;
+  --steel: #c7a597;
+  --mist: #e6dad6;
+  --slate: #8a5a4c;
+
+  /* Semantic, used only for state. */
+  --open: #3daa5c;
+  --danger: #c8412b;
+  --danger-wash: #fbe7e2;
+  --warning-ink: #8a4b1f;
+
+  --font: "Inter", "Inter Display", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "Fragment Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* Radius scale tightened at the client's request: crisper cards and image frames
+     than the Makro originals (4/8/10/12/16/20/24/40). Pills stay fully round. */
+  --r-4: 3px;
+  --r-8: 5px;
+  --r-10: 6px;
+  --r-12: 7px;
+  --r-16: 8px;
+  --r-20: 10px;
+  --r-24: 12px;
+  --r-40: 14px;
+  --r-pill: 500px;
+  --r-img: 8px;
+
+  --sh-soft: 0 0.6px 0.6px -1.25px rgba(0, 0, 0, 0.09), 0 2.29px 2.29px -2.5px rgba(0, 0, 0, 0.08), 0 10px 10px -3.75px rgba(0, 0, 0, 0.03);
+  --sh-float: 0 0.64px 1.15px -0.81px rgba(92, 56, 46, 0.11), 0 1.93px 3.48px -1.63px rgba(92, 56, 46, 0.11), 0 5.1px 9.19px -2.44px rgba(92, 56, 46, 0.1), 0 16px 28.8px -3.25px rgba(92, 56, 46, 0.06);
+  --sh-deep: 0 0.81px 0.81px -0.47px rgba(62, 40, 36, 0.19), 0 1.91px 1.91px -0.94px rgba(62, 40, 36, 0.18), 0 3.49px 3.49px -1.41px rgba(62, 40, 36, 0.18), 0 5.79px 5.79px -1.88px rgba(62, 40, 36, 0.17), 0 9.36px 9.36px -2.34px rgba(62, 40, 36, 0.16), 0 15.32px 15.32px -2.81px rgba(62, 40, 36, 0.15), 0 26.38px 26.38px -3.28px rgba(62, 40, 36, 0.12), 0 48px 48px -3.75px rgba(62, 40, 36, 0.06);
+  --sh-chip: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+  --glow: radial-gradient(134% 100% at 50% 0%, #ffffff 0%, #f5ede8 100%);
+  --fade: linear-gradient(#ffffff 0%, #f5ede8 100%);
+
+  --z-sticky: 10;
+  --z-tabbar: 20;
+  --z-sheet: 40;
+  --z-toast: 50;
+  --z-overlay: 60;
+
+  --app-w: 480px;
+  /* Never less than the notch: in landscape iPhones report a side inset (viewport-fit=cover). */
+  --gutter: max(16px, env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  --nav-h: 0px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
